@@ -1,0 +1,36 @@
+:root{
+    --size-text: 1.5rem;
+}
+header,footer,section{
+    padding: 100px 0;
+}
+header{
+    padding: 200px 0;
+
+}
+header{
+    background-image: url(img/top.jpg);
+    background-size:cover;
+}
+body{
+    font-family: 'Oswald', sans-serif;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+p{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: var(--size-text);
+    margin: 10px 5% ;
+}
+
+h2{
+    margin: 10px 2%;
+}
+.btn-play{
+    display: block;
+    max-width: 200px;
+    margin: 10px auto;
+}
+.t-center{
+    border-radius: 15px;
+}

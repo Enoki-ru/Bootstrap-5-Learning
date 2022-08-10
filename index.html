@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Кусок</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="fontello/css/fontello.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="text-center p-3 mb-2 bg-white t-center">Framework Bootstrap. Explained  by Enoki.</h1>
+            <div class="button-play">
+              <a class="btn btn-light btn-lg btn-play" href="#footer" role="button">Нажать</a>
+              <!-- footer записали, а не ссылку, потому что fw делает плавную прокрутку до id footer -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+
+    
+    <!--
+       <h1>Привет!</h1>
+    <p>Этот сайт предназначен для полного, или хотя бы частичного освоения первого в моей карьере фреймворка, Bootstrap 5 (ну и еще popper добавил на всякий). Нашел в инете плейлист из 13 мини уроков 
+        по данной теме, надеюсь научусь хоть чему-нибудь. Приятного чтения!
+    </p>
+    <h2>Урок 1.</h2>
+    <p>Если написать в строке .cur или любое другое название чтобы вначале была точка, то VSC создаст сразу тебе div с этим названием. А если написать .cur*3 то сразу три div-а. Круто! </p>
+    <div class="container">
+        <div class="row">
+            <div class="col">1</div>
+            <div class="col">2</div>
+            <div class="col">3</div>
+        </div>
+    </div>
+    <p>Объясняю. Я сейчас создал контейнер, в котором есть только одна строка row. а в нее запихнул уже 3 столбца.</p>
+    <p>Это сделал сам фреймфорк, понимая, что когда я создаю в классе row классы col то имею ввиду сделать за меня сетку из 1 строки 3 столбов</p>
+    <p>Параллельно я сейчас скачать Source файлы фреймворка, чтобы всё из всех разделов документации полностью работало (как я понял, без сурса не будет работать всё)</p>
+    <p> В dist/jss на важен bootstrap.min.js или просто bootstrap.jsю Подключать минимальную версию, она отличается тем, что там нет табуляции и пробелов, очень сжатая но полноценная версия</p>
+    <p>Но еще больше возможностей как раз нам дает версия bundle.min, ее и берем в этот проект</p>
+    <p>Из-за того, что это фреймворк, то здесь очень много разных плюшек есть. Для кроссплаформенности, для сеток, и тд. Поэтому если в итоге нам что-то будет нужно конкретное,
+        то подключать весь фрейм смысла нет, можно отдельные css и js
+    </p>
+    <p>Также для более крутой работы установили плагин на VSC плагин bootstrap 5, и сейчас какой-нибудь синтекс выберем. Напишем b5-form</p>
+    <div class="container">
+        <div class="row">
+            <div class="col"><form class="row g-3 needs-validation" novalidate>
+              <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">Имя</label>
+                <input type="text" class="form-control" id="validationCustom01" value="Иван" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustom02" class="form-label">Фамилия</label>
+                <input type="text" class="form-control" id="validationCustom02" value="Иванов" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustomUsername" class="form-label">Никнейм</label>
+                <div class="input-group">
+                  <span class="input-group-text" id="inputGroupPrepend">@</span>
+                  <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                  <div class="invalid-feedback">
+                    Please choose a username.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="validationCustom03" class="form-label">Страна</label>
+                <input type="text" class="form-control" id="validationCustom03" required>
+                <div class="invalid-feedback">
+                  Please provide a valid country.
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label for="validationCustom04" class="form-label">Город</label>
+                <select class="form-select" id="validationCustom04" required>
+                  <option selected disabled value="">Выбрать...</option>
+                  <option>...</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid state.
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label for="validationCustom05" class="form-label">Индекс</label>
+                <input type="text" class="form-control" id="validationCustom05" required>
+                <div class="invalid-feedback">
+                  Please provide a valid zip.
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                  </label>
+                  <div class="invalid-feedback">
+                    You must agree before submitting.
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary" type="submit">Submit form</button>
+              </div>
+            </form></div>
+
+        </div>
+    </div> 
+  -->
+    <div class="container">
+      <h1 class="text-center">Привет!</h1>
+    </div>
+    <p>Я начинаю новый цикл изучения веб-кодинга. Сегодня мы начнем изучать фреймворк Bootstrap 5!</p>
+    <p>Сразуначнем разбирать, и начнем мы <u>с текстовых классов.</u> Ну и немного новых тегов</p>
+   <p> Для начала теги:</p>
+    <div class="container">
+      <ul>
+        <li>
+          <p>Mark- для <mark> Выделения</mark> текста </p>
+        </li>
+        <li>
+          <p>Del- для <del>зачеркивания</del> куска текста</p>
+        </li>
+        <li>
+          <p>U- для <u>подчеркивания текста</u> </p>
+        </li>
+        <li>
+          <p>small- для <small>мелкого текста(здесь не сильно видно, но видно)</small></p>
+        </li>
+        <li>
+          <p>strong - для <strong>жирных</strong>, в плане текста</p>
+        </li>
+        <li>
+          <p>em - <em>для курсива</em></p>
+        </li>
+        <li>
+          <p>abbr- Делает <abbr title="Приветики">подсказку</abbr> при наведении</p>
+        </li>
+      </ul>
+    </div>
+    <p>Список выше я сделал через ul список, но если нужно, я могу убрать маркеры, оставив только сам текст списка:</p>
+    <div class="container">
+      <ul class="list-unstyled border border-dark rounded">
+        <li>
+          <p>Использовав класс <strong>list-unstyled</strong></p>
+        </li>
+        <li>
+          <p>Я добился</p>
+  
+        </li>
+        <li>
+          <p>Такого эффекта</p>
+          
+        </li>
+      </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script> 
+ </body>
+ <footer id="footer">
+  <p>Заказать</p>
+ </footer>
+</html>
