@@ -6,11 +6,7 @@ header,footer,section{
 }
 header{
     padding: 200px 0;
-
-}
-header{
     background-image: url(img/top.jpg);
-    background-size:cover;
 }
 body{
     font-family: 'Oswald', sans-serif;
@@ -33,4 +29,22 @@ h2{
 }
 .t-center{
     border-radius: 15px;
+}
+.top-v{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    overflow: hidden;
+}
+.top-video{
+    min-height: 700px;
+    min-width: 100%;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
